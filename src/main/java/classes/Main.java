@@ -151,7 +151,7 @@ public class Main {
         JOptionPane.showMessageDialog(null, "Faxineiro criado com sucesso:\n" + faxineiro);
     }
 
-    private static double converteDouble(String valorStr) {
+    public static double converteDouble(String valorStr) {
         if (valorStr == null || valorStr.trim().isEmpty()) {
             JOptionPane.showMessageDialog(null, "Valor inválido. Será definido como 0.", "Aviso", JOptionPane.WARNING_MESSAGE);
             return 0;
@@ -167,7 +167,7 @@ public class Main {
         return valor < 0 ? 0 : valor;
     }
 
-    private static int converteInt(String valorStr) {
+    public static int converteInt(String valorStr) {
         if (valorStr == null || valorStr.trim().isEmpty()) {
             JOptionPane.showMessageDialog(null, "Valor inválido. Será definido como 0.", "Aviso", JOptionPane.WARNING_MESSAGE);
             return 0;
