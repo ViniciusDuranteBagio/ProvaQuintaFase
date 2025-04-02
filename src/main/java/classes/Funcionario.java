@@ -1,6 +1,8 @@
 package classes;
 
-public class Funcionario {
+import javax.swing.JOptionPane;
+
+public abstract class Funcionario {
 
     protected String nome;
     protected double salario;
@@ -26,16 +28,13 @@ public class Funcionario {
         this.salario = salario;
     }
 
-    public void calcularSalario(double salarioCalc) {
-        this.salario = salarioCalc;
-    };
+    public abstract void calcularSalario();
 
     public double validarValor(double valor) {
         if (valor < 0) {
-            System.out.println("Valor inválido. O valor será definido como 0.");
+            JOptionPane.showMessageDialog(null, "Não pode ser negativo. Salário = 0");
             return 0.0;
         }
         return valor;
     }
-
 }
