@@ -1,0 +1,8 @@
+classes\Funcionario.class
+classes\Repositor.class
+classes\Main.class
+classes\Faxineiro.class
+classes\interfaces\iCadastro.class
+classes\Seguranca.class
+classes\Caixa.class
+classes\Vendedor.class
