@@ -80,6 +80,26 @@ public class Menu {
         return valor;
     }
 
+    public String valorString(String motivo){
+        String valor;
+        boolean valorValido = false;
+
+        do {
+            valor = JOptionPane.showInputDialog(null, "Digite o " + motivo);
+
+            if (valor != null && valor.matches("[a-zA-Z ]+")) {
+                valorValido = true;
+            } else {
+                JOptionPane.showMessageDialog(null,
+                        "ERRO: O " + valor + " não é permitido!\nPor favor, tente novamente usando somente letras.",
+                        "Valor Inválido",
+                        JOptionPane.ERROR_MESSAGE);
+            }
+        } while (!valorValido);
+
+        return valor;
+    }
+
     public void visualizar(Pessoa pessoa){
         JOptionPane.showMessageDialog(null,
                 "Nome: " + pessoa.getNome() + "\n" +

@@ -17,7 +17,7 @@ public class Main {
 
             if (op == 1) {
                 double salarioBase = 0;
-                String nome = JOptionPane.showInputDialog("Digite o nome colaborador: ");
+                String nome = menu.valorString("Digite o nome colaborador: ");
                 String turno = menu.turno();
                 String cargo = menu.cargo();
 
