@@ -15,15 +15,6 @@ public class Pessoa {
     public Pessoa(){
     }
 
-    public void visualizar(Pessoa pessoa){
-        JOptionPane.showMessageDialog(null,
-                "Nome: " + nome + "\n" +
-                        "Cargo: " + cargo.getDescricao() + "\n" +
-                        "Turno: " + cargo.getTurno() + "\n" +
-                        "Sálario: " + cargo.getSalarioBase() + "\n"
-        );
-    }
-
     public Cargo getCargo() {
         return cargo;
     }

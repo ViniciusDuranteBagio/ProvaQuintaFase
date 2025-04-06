@@ -5,7 +5,7 @@ import com.annas.service.colaborador.Pessoa;
 
 import javax.swing.*;
 
-public class main {
+public class Main {
     public static void main(String[] args) {
         Menu menu = new Menu();
 
@@ -29,7 +29,7 @@ public class main {
                         case "Caixa":
                                 Caixa cx = new Caixa(cargo, turno, salarioBase);
                                 Pessoa pessoaCaixa = new Pessoa(nome, cx);
-                                pessoaCaixa.visualizar(pessoaCaixa);
+                                menu.visualizar(pessoaCaixa);
                             break;
 
                         case "Faxineiro":
@@ -38,37 +38,32 @@ public class main {
 
                                 Faxineiro fx = new Faxineiro(cargo, turno, turnosExtras, salarioBase, bonus);
                                 Pessoa pessoafx = new Pessoa(nome, fx);
-                                pessoafx.visualizar(pessoafx);
-
+                                menu.visualizar(pessoafx);
                             break;
 
                         case "Repositor":
-
                                 double qtdHorasTrabalhadas = menu.valorDouble("quantidade de horas trabalhadas: ");
                                 double valorHora = menu.valorDouble("valor da hora");
 
                                 Repositor rp = new Repositor(cargo, turno, qtdHorasTrabalhadas, valorHora);
                                 Pessoa pessoaRp = new Pessoa(nome, rp);
-                                pessoaRp.visualizar(pessoaRp);
-
+                                menu.visualizar(pessoaRp);
                             break;
 
-                        case "Seguranca":
+                        case "Segurança":
                             Seguranca sg = new Seguranca(cargo, turno, salarioBase);
 
                             Pessoa pessoaSg = new Pessoa(nome, sg);
-                            pessoaSg.visualizar(pessoaSg);
-
+                            menu.visualizar(pessoaSg);
                             break;
 
                         case "Vendedor":
-
                             double qtdVendas = menu.valorDouble("quantidade de vendas");
                             double comissao = menu.valorDouble("valor da comissão");
 
                             Vendedor vd = new Vendedor(cargo, turno, salarioBase, qtdVendas, comissao);
                             Pessoa pessoaVd = new Pessoa(nome, vd);
-                            pessoaVd.visualizar(pessoaVd);
+                            menu.visualizar(pessoaVd);
                             break;
                     }
 

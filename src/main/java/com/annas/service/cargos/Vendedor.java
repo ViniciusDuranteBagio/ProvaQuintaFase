@@ -11,7 +11,6 @@ public class Vendedor extends Cargo{
         setSalarioBase(calcularSalario());
     }
 
-
     @Override
     public double calcularSalario() {
         return getSalarioBase() +  (qtdVendas * comissao);

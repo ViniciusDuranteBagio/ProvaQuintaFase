@@ -14,7 +14,6 @@ public class Faxineiro extends Cargo{
             setSalarioBase(calcularSalario());
     }
 
-
     @Override
     public double calcularSalario() {
         return getSalarioBase() + (turnoExtra * bonus);

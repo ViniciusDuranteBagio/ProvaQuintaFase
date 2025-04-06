@@ -42,10 +42,6 @@ public abstract class Cargo {
     }
 
     public void setSalarioBase(double salarioBase) {
-        if (salarioBase >= 0) {
             this.salarioBase = salarioBase;
-        }else {
-            JOptionPane.showMessageDialog(null, "Erro: não é permitido valor negativo");
-        }
     }
 }
